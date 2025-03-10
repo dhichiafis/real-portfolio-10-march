@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block content %}
+<div class="px-8 mx-auto mt-6">
+    <h2 class="text-3xl text-center ">This is teh project i have done</h2>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+    {% for project in projects %}
+    <div class=" rounded-md border border-gray-800 bg-white">
+        <h2>{{project.title}}</h2>
+        <p>{{project.description}}</p>
+        <p><a href="{{project.url}}">github link</a></p>
+    </div>
+{% endfor %}
+</div>
+</div>
+{% endblock %}
